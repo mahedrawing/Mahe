@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Güzel 💕</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 <style>
   /* Styles for the slideshow */
   .slideshow-container {
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
     position: relative;
     margin: auto;
     margin-top: 20px;
@@ -22,7 +25,7 @@
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fade 1.5s; /* Fade animation for motion */
+    animation: fade 1.5s;
   }
   @keyframes fade {
     from { opacity: 0.4; }
@@ -37,7 +40,7 @@
 
   <!-- START SCREEN -->
   <div id="startScreen">
-    <p class="intro"> Hey Güzel😍 💗</p>
+    <p class="intro"> Hey Güzel 😍 💗</p>
     <button id="startBtn">start ✨</button>
   </div>
 
@@ -52,27 +55,24 @@
 
   <!-- RESULT SCREEN -->
   <div id="resultScreen" class="hidden">
-    <div id="result">🥳🥳Of course you said yes 😜 🥰🐼</div>
-    <img id="cat" src="rr.jpg" alt="cute cat">
+    <div id="result">🥳🥳 Of course you say YES 😜 🥰</div>
+    <img id="cat" src="bb.jpg" alt="cute cat">
     
-    <!-- Slideshow with your 5 images, appearing one after another automatically -->
     <div class="slideshow-container">
       <div class="slideshow-slide"><img src="1.jpg" alt="Image 1"></div>
       <div class="slideshow-slide"><img src="2.jpg" alt="Image 2"></div>
       <div class="slideshow-slide"><img src="3.jpg" alt="Image 3"></div>
-      <div class="slideshow-slide"><img src="4.jpg" alt="Image 4"></div>
+      <div class="slideshow-slide"><img src="4.jpg" alt="Image 5"></div>
       <div class="slideshow-slide"><img src="5.jpg" alt="Image 5"></div>
     </div>
   </div>
 
 </div>
 
-<!-- HEARTBEAT SOUND -->
 <audio id="heartbeat" src="heartbeat.mp3"></audio>
 
 <script src="script.js"></script>
 <script>
-  // Add this slideshow script at the end (or in script.js)
   let slideIndex = 0;
   function showSlides() {
     const slides = document.getElementsByClassName("slideshow-slide");
@@ -82,14 +82,13 @@
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1; }    
     slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds (adjust as needed)
+    setTimeout(showSlides, 3000);
   }
 
-  // Trigger slideshow only after result screen is shown (assuming yesBtn click shows it)
   document.getElementById('yesBtn').addEventListener('click', function() {
-    // Your existing logic to show resultScreen...
-    showSlides(); // Start slideshow
+    showSlides();
   });
 </script>
+
 </body>
 </html>
